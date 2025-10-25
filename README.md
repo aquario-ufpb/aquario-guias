@@ -273,7 +273,7 @@ git push
 
 ## 📞 Dúvidas?
 
-Se tiver dúvidas sobre como organizar o conteúdo ou onde adicionar um guia específico, abra uma issue neste repositório ou entre em contato com a equipe do Aquário.
+Se tiver dúvidas sobre como organizar o conteúdo ou onde adicionar um guia específico, abra uma issue nesse repositório ou entre em contato com a equipe do Aquário.
 
 ---
 
