@@ -1,6 +1,6 @@
 # Guias do Aquário
 
-Este repositório contém o conteúdo dos guias do Aquário UFPB, organizados por curso.
+Esse repositório contém o conteúdo dos guias do Aquário UFPB, organizados por curso.
 
 ## 📁 Estrutura de Pastas
 
