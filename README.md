@@ -1,29 +1,35 @@
 # Guias do Aquário
 
-Esse repositório contém o conteúdo dos guias do Aquário UFPB, organizados por curso.
+Esse repositório contém o conteúdo dos guias do Aquário UFPB, organizados por centro e categorias temáticas.
 
 ## 📁 Estrutura de Pastas
 
-A estrutura de pastas determina como os guias serão organizados no site. Com a nova estrutura, você pode usar **nomes elegantes e legíveis** para seus arquivos!
+A estrutura de pastas determina como os guias serão organizados no site. Você pode usar **nomes elegantes e legíveis** para seus arquivos!
 
 ```
 aquario-guias/
-├── ciencia-da-computacao/
-│   ├── bem-vindo/
-│   │   ├── Sobre o Curso.md
-│   │   └── Grade Curricular.md
-│   ├── cadeiras/
-│   │   ├── Principais Cadeiras.md
-│   │   └── Principais Cadeiras/
-│   │       ├── Cálculo I.md
-│   │       ├── Programação I.md
-│   │       └── Estrutura de Dados.md
-│   └── laboratorios/
-│       └── LAICO.md
-├── ciencias-de-dados-e-inteligencia-artificial/
-│   └── ...
-└── engenharia-da-computacao/
-    └── ...
+└── centro-de-informatica/
+    ├── 0 - Bem Vindo/
+    │   ├── 1 - Introdução.md
+    │   └── 2 - Dicas.md
+    ├── 1 - Grupos/
+    │   ├── Atética.md
+    │   ├── Grupos e Ligas.md
+    │   ├── Laboratórios.md
+    │   └── PET.md
+    ├── 2 - Informações/
+    │   ├── Bolsas.md
+    │   ├── Salas.md
+    │   └── Transporte.md
+    ├── Ciencia da Computação/
+    │   ├── 0 - Sobre o Curso.md
+    │   ├── Coordenação.md
+    │   ├── Estrutura CC.md
+    │   └── Grade.md
+    ├── Ciencia de Dados e Inteligencia Artificial/
+    │   └── ...
+    └── Engenharia da Computação/
+        └── ...
 ```
 
 ## 🗂️ Hierarquia no Site
@@ -31,70 +37,54 @@ aquario-guias/
 A estrutura de pastas é mapeada para URLs da seguinte forma:
 
 ```
-/guias/{curso}/{guia}/{secao}/{subsecao}
+/guias/{guia}/{secao}/{subsecao}
 ```
 
 ### Níveis:
 
-1. **Curso** (nível 1): Nome do curso (pasta raiz - **apenas essa usa kebab-case**)
-   - Exemplo: `ciencia-da-computacao`
-   - URL: `/guias/ciencia-da-computacao`
+1. **Centro** (nível 1): Nome do centro (pasta raiz - **usa kebab-case**)
+   - Exemplo: `centro-de-informatica`
+   - URL: `/guias`
 
 2. **Guia** (nível 2): Categoria principal do guia (pasta)
-   - Exemplo: `bem-vindo`, `cadeiras`, `laboratorios`
-   - URL: `/guias/ciencia-da-computacao/bem-vindo`
+   - Exemplo: `0 - Bem Vindo`, `1 - Grupos`, `Ciencia da Computação`
+   - URL: `/guias/0-bem-vindo`, `/guias/1-grupos`, `/guias/ciencia-da-computacao`
 
 3. **Seção** (nível 3): Arquivo `.md` com nome amigável
-   - Exemplo: `Sobre o Curso.md`, `Principais Cadeiras.md`
-   - URL: `/guias/ciencia-da-computacao/bem-vindo/sobre-o-curso` (slug gerado automaticamente!)
+   - Exemplo: `1 - Introdução.md`, `Atética.md`, `Sobre o Curso.md`
+   - URL: `/guias/0-bem-vindo/1-introducao` (slug gerado automaticamente!)
 
 4. **Subseção** (nível 4): Arquivo `.md` dentro de uma pasta de seção
-   - Exemplo: `Cálculo I.md`, `Programação I.md`
-   - URL: `/guias/ciencia-da-computacao/cadeiras/principais-cadeiras/calculo-i`
+   - Exemplo: Arquivos dentro de pastas como `Estrutura CC/`
+   - URL: `/guias/ciencia-da-computacao/estrutura-cc/[subsecao]`
 
-## ✨ Nova Estrutura - O que mudou?
+## ✨ Características da Estrutura
 
-### Antes (estrutura antiga ❌):
-
-```
-cadeiras/
-└── principais-cadeiras/
-    └── content.md              # Nome genérico
-```
-
-### Agora (estrutura nova ✅):
-
-```
-cadeiras/
-└── Principais Cadeiras.md      # Nome elegante e legível!
-```
-
-### Benefícios:
+A estrutura permite:
 
 - ✅ **Nomes legíveis**: Use espaços, acentos e maiúsculas
 - ✅ **Mais intuitivo**: O nome do arquivo é exatamente o que você quer mostrar
 - ✅ **Slugs automáticos**: O sistema converte "Cálculo I.md" → URL `calculo-i`
-- ✅ **Menos aninhamento**: Não precisa de `pasta/content.md`, só `Nome do Arquivo.md`
+- ✅ **Estrutura simplificada**: Use `Nome do Arquivo.md` diretamente, sem necessidade de `pasta/content.md`
 
 ## ✍️ Como Adicionar Novo Conteúdo
 
-### 1. Escolha o Curso
+### 1. Escolha o Centro e Categoria
 
-Navegue até a pasta do curso onde deseja adicionar conteúdo:
+Navegue até a pasta do centro (`centro-de-informatica/`) e escolha ou crie a categoria apropriada:
 
-- `ciencia-da-computacao/`
-- `ciencias-de-dados-e-inteligencia-artificial/`
-- `engenharia-da-computacao/`
+- Para conteúdo geral do CI: `0 - Bem Vindo`, `1 - Grupos`, `2 - Informações`, etc.
+- Para conteúdo específico de curso: `Ciencia da Computação`, `Ciencia de Dados e Inteligencia Artificial`, `Engenharia da Computação`
 
-⚠️ **Atenção**: Apenas os **nomes de curso** devem usar kebab-case (tudo minúsculo com hífens).
+⚠️ **Atenção**: Apenas a pasta do **centro** deve usar kebab-case (ex: `centro-de-informatica`). As pastas de categorias podem usar nomes descritivos com espaços e maiúsculas.
 
 ### 2. Crie a Estrutura de Pastas (se necessário)
 
 Crie as pastas necessárias seguindo a hierarquia:
 
 ```bash
-# Exemplo: Adicionar conteúdo sobre Git no curso de Ciência da Computação
-mkdir -p ciencia-da-computacao/ferramentas
+# Exemplo: Adicionar conteúdo sobre ferramentas no CI
+mkdir -p centro-de-informatica/3 - Ferramentas
 ```
 
 ### 3. Crie o Arquivo Markdown com Nome Elegante
@@ -103,7 +93,7 @@ Crie um arquivo `.md` com um **nome descritivo e amigável**:
 
 ```bash
 # Use espaços, acentos e maiúsculas normalmente!
-touch "ciencia-da-computacao/ferramentas/Controle de Versão com Git.md"
+touch "centro-de-informatica/3 - Ferramentas/Controle de Versão com Git.md"
 ```
 
 ### 4. Escreva o Conteúdo em Markdown
@@ -142,23 +132,21 @@ git commit -m "Mensagem do commit"
 
 ### Nomes de Pastas
 
-**Apenas para pastas de CURSO (nível raiz):**
+**Para pasta do CENTRO (nível raiz):**
 
 - Use **kebab-case** (palavras separadas por hífen)
 - Use apenas letras minúsculas
 - Evite caracteres especiais e acentos
 
-✅ **Correto para cursos:**
+✅ **Correto para centros:**
 
-- `ciencia-da-computacao`
-- `ciencias-de-dados-e-inteligencia-artificial`
-- `engenharia-da-computacao`
+- `centro-de-informatica`
 
-**Para outras pastas (guias):**
+**Para outras pastas (categorias/guias):**
 
-- Use nomes descritivos simples
-- Pode ser kebab-case ou palavras simples
-- Exemplos: `bem-vindo`, `cadeiras`, `laboratorios`, `ferramentas`
+- Use nomes descritivos com espaços e maiúsculas quando apropriado
+- Pode usar números para ordenação (ex: `0 - Bem Vindo`, `1 - Grupos`)
+- Exemplos: `0 - Bem Vindo`, `1 - Grupos`, `Ciencia da Computação`, `Ferramentas`
 
 ### Nomes de Arquivos Markdown
 
@@ -200,83 +188,80 @@ O sistema converte automaticamente os nomes dos arquivos em URLs amigáveis:
 
 ### Exemplo 1: Conteúdo Simples (Sem Sub-conteúdo)
 
-**Objetivo:** Criar guia sobre o LAICO
+**Objetivo:** Criar guia sobre Laboratórios
 
 **Estrutura:**
 
 ```
-ciencia-da-computacao/
-└── laboratorios/
-    └── LAICO.md
+centro-de-informatica/
+└── 1 - Grupos/
+    └── Laboratórios.md
 ```
 
-**URL resultante:** `/guias/ciencia-da-computacao/laboratorios/laico`
+**URL resultante:** `/guias/1-grupos/laboratorios`
 
-**LAICO.md:**
+**Laboratórios.md:**
 
 ```markdown
-# LAICO - Laboratório de Aplicações de Informática Avançada
+# Laboratórios - O que são?
 
-## Sobre o LAICO
+Você ouvirá bastante sobre os laboratórios do CI. Eles são basicamente mini instituições dentro da UFPB lideradas cada uma por seus professores e que tem como objetivo a realização de projetos dentro da área determinada pelo laboratório.
 
-O LAICO é um laboratório...
+## Como entrar em um?
 
-## Horários de Funcionamento
-
-- Segunda a Sexta: 8h às 18h
-- Sábado: 8h às 12h
+Vai depender muito de cada laboratório. O recomendado é perguntar a pessoas mais a frente do curso sobre cada um...
 ```
 
 ### Exemplo 2: Conteúdo com Sub-conteúdo
 
-**Objetivo:** Criar seção sobre cadeiras principais com detalhes de cada uma
+**Objetivo:** Criar seção sobre estrutura do curso com detalhes de cada componente
 
 **Estrutura:**
 
 ```
-ciencia-da-computacao/
-└── cadeiras/
-    ├── Principais Cadeiras.md          ← Conteúdo principal
-    └── Principais Cadeiras/            ← Pasta com mesmo nome
-        ├── Cálculo I.md
-        ├── Programação I.md
-        └── Estrutura de Dados.md
+centro-de-informatica/
+└── Ciencia da Computação/
+    ├── Estrutura CC.md                 ← Conteúdo principal
+    └── Estrutura CC/                    ← Pasta com mesmo nome
+        ├── Atividades Extracurriculares.md
+        ├── Complementares Flexíveis.md
+        └── assets/
+            └── grade.png
 ```
 
 **O que acontece:**
 
-1. Ao acessar `/guias/ciencia-da-computacao/cadeiras/principais-cadeiras`:
-   - Mostra o conteúdo de `Principais Cadeiras.md`
+1. Ao acessar `/guias/ciencia-da-computacao/estrutura-cc`:
+   - Mostra o conteúdo de `Estrutura CC.md`
    - **Adiciona automaticamente** uma seção "Conteúdo relacionado" com links para as sub-páginas
 
-**Principais Cadeiras.md:**
+**Estrutura CC.md:**
 
 ```markdown
-# Principais Cadeiras do Curso
+# Estrutura do Curso de Ciência da Computação
 
-Este guia apresenta as disciplinas fundamentais do curso de Ciência da Computação.
+Este guia apresenta a estrutura curricular do curso.
 
-## Sobre as Disciplinas
+## Sobre a Estrutura
 
-As cadeiras principais formam a base do conhecimento necessário...
+A estrutura do curso é composta por...
 ```
 
 **Resultado na página:**
 
 ```markdown
-# Principais Cadeiras do Curso
+# Estrutura do Curso de Ciência da Computação
 
-Este guia apresenta as disciplinas fundamentais do curso de Ciência da Computação.
+Este guia apresenta a estrutura curricular do curso.
 
-## Sobre as Disciplinas
+## Sobre a Estrutura
 
-As cadeiras principais formam a base do conhecimento necessário...
+A estrutura do curso é composta por...
 
 ## Conteúdo relacionado
 
-- [Cálculo I](/guias/ciencia-da-computacao/cadeiras/principais-cadeiras/calculo-i)
-- [Programação I](/guias/ciencia-da-computacao/cadeiras/principais-cadeiras/programacao-i)
-- [Estrutura de Dados](/guias/ciencia-da-computacao/cadeiras/principais-cadeiras/estrutura-de-dados)
+- [Atividades Extracurriculares](/guias/ciencia-da-computacao/estrutura-cc/atividades-extracurriculares)
+- [Complementares Flexíveis](/guias/ciencia-da-computacao/estrutura-cc/complementares-flexiveis)
 ```
 
 ### Exemplo 3: Apenas Sub-conteúdo (Sem Arquivo Principal)
@@ -286,8 +271,8 @@ As cadeiras principais formam a base do conhecimento necessário...
 **Estrutura:**
 
 ```
-ciencia-da-computacao/
-└── ferramentas/
+centro-de-informatica/
+└── 3 - Ferramentas/
     └── Desenvolvimento/                ← Pasta SEM .md principal
         ├── Git.md
         ├── Docker.md
@@ -295,96 +280,59 @@ ciencia-da-computacao/
 ```
 
 **O que acontece:**
-Ao acessar `/guias/ciencia-da-computacao/ferramentas/desenvolvimento`, o sistema **gera automaticamente**:
+Ao acessar `/guias/3-ferramentas/desenvolvimento`, o sistema **gera automaticamente**:
 
 ```markdown
 # Desenvolvimento
 
 ## Conteúdo relacionado
 
-- [Git](/guias/ciencia-da-computacao/ferramentas/desenvolvimento/git)
-- [Docker](/guias/ciencia-da-computacao/ferramentas/desenvolvimento/docker)
-- [VS Code](/guias/ciencia-da-computacao/ferramentas/desenvolvimento/vs-code)
+- [Git](/guias/3-ferramentas/desenvolvimento/git)
+- [Docker](/guias/3-ferramentas/desenvolvimento/docker)
+- [VS Code](/guias/3-ferramentas/desenvolvimento/vs-code)
 ```
 
-### Exemplo 4: Estrutura Completa de Cadeiras por Período
+### Exemplo 4: Estrutura com Ordenação Numérica
 
 **Estrutura:**
 
 ```
-ciencia-da-computacao/
-└── cadeiras/
-    ├── Primeiro Período.md
-    ├── Primeiro Período/
-    │   ├── Cálculo I.md
-    │   ├── Programação I.md
-    │   └── Introdução à Computação.md
-    ├── Segundo Período.md
-    └── Segundo Período/
-        ├── Cálculo II.md
-        ├── Programação II.md
-        └── Estrutura de Dados.md
+centro-de-informatica/
+└── 1 - Grupos/
+    ├── 0 - Introdução.md
+    ├── 1 - Laboratórios.md
+    ├── 2 - Ligas Acadêmicas.md
+    └── 3 - Grupos de Estudo.md
 ```
 
-**Cálculo I.md (exemplo de sub-conteúdo):**
-
-```markdown
-# Cálculo I
-
-## Sobre a Disciplina
-
-Disciplina de cálculo diferencial e integral, fundamental para a formação...
-
-## Ementa
-
-- Limites
-- Derivadas
-- Integrais
-- Aplicações
-
-## Dicas de Estudo
-
-1. Pratique bastante exercícios
-2. Assista às video-aulas complementares
-3. Participe das monitorias
-
-## Professores
-
-- Prof. João Silva
-- Prof. Maria Santos
-
-## Recursos Úteis
-
-- [Khan Academy - Cálculo](https://www.khanacademy.org/math/calculus-1)
-- [MIT OpenCourseWare](https://ocw.mit.edu/)
-```
+**Benefício:** Os números no início garantem a ordem desejada na navegação.
 
 ### Exemplo 5: Guia com Imagens
 
 **Estrutura:**
 
 ```
-ciencia-da-computacao/
-└── laboratorios/
-    ├── LAICO.md
-    └── LAICO/
-        └── imagens/
-            ├── foto-lab.jpg
-            └── mapa-localizacao.png
+centro-de-informatica/
+└── 2 - Informações/
+    ├── Transporte.md
+    └── Transporte/
+        └── assets/
+            ├── mapa-rotas.png
+            └── horarios.png
 ```
 
-**LAICO.md:**
+**Transporte.md:**
 
 ```markdown
-# LAICO
+# Transporte
 
-![Foto do Laboratório](./LAICO/imagens/foto-lab.jpg)
+![Mapa de Rotas](./Transporte/assets/mapa-rotas.png)
 
-## Localização
+## Horários
 
-![Mapa](./LAICO/imagens/mapa-localizacao.png)
+![Horários](./Transporte/assets/horarios.png)
 
-O laboratório fica no prédio...
+Informações sobre transporte público...
 ```
 
 ## 🔗 Links Internos
@@ -392,9 +340,11 @@ O laboratório fica no prédio...
 Ao criar links para outras páginas do guia, use **caminhos absolutos** começando com `/guias/`:
 
 ```markdown
-Veja mais sobre [Programação I](/guias/ciencia-da-computacao/cadeiras/primeiro-periodo/programacao-i)
+Veja mais sobre [Laboratórios](/guias/1-grupos/laboratorios)
 
-Para saber sobre o LAICO, acesse [este link](/guias/ciencia-da-computacao/laboratorios/laico)
+Para saber sobre o PET, acesse [este link](/guias/1-grupos/pet)
+
+Confira informações sobre [Sobre o Curso](/guias/ciencia-da-computacao/0-sobre-o-curso)
 ```
 
 ## 🖼️ Imagens e Recursos
@@ -416,61 +366,30 @@ cadeiras/
 ### Opção 2: Pasta Compartilhada
 
 ```
-ciencia-da-computacao/
+centro-de-informatica/
 ├── assets/
 │   └── imagens/
-│       └── logo-cin.png
-└── bem-vindo/
-    └── Sobre o Curso.md
+│       └── logo-ci.png
+└── 0 - Bem Vindo/
+    └── 1 - Introdução.md
 ```
 
 ```markdown
-![Logo CIn](../assets/imagens/logo-cin.png)
+![Logo CI](../assets/imagens/logo-ci.png)
 ```
-
-## 📋 Comparação Rápida: Antes vs Agora
-
-| Aspecto             | Estrutura Antiga ❌         | Estrutura Nova ✅                 |
-| ------------------- | --------------------------- | --------------------------------- |
-| **Nome do arquivo** | `content.md` (sempre igual) | `Nome Descritivo.md` (legível)    |
-| **Espaços**         | Não permitido               | ✅ Permitido                      |
-| **Acentos**         | Não permitido               | ✅ Permitido                      |
-| **Maiúsculas**      | Não permitido               | ✅ Permitido                      |
-| **Aninhamento**     | `pasta/subpasta/content.md` | `pasta/Título Bonito.md`          |
-| **Slugs**           | Nome da pasta               | Gerado automaticamente do arquivo |
-
-### Migração de Conteúdo Antigo
-
-Se você tem conteúdo na estrutura antiga, pode migrar assim:
-
-**Antes:**
-
-```
-cadeiras/
-└── calculo-i/
-    └── content.md
-```
-
-**Depois:**
-
-```
-cadeiras/
-└── Cálculo I.md
-```
-
-Basta **renomear e mover** o `content.md` para o nível acima com um nome descritivo!
 
 ## ✅ Checklist para Novo Conteúdo
 
 Antes de fazer commit, verifique:
 
-- [ ] A pasta do curso usa kebab-case (ex: `ciencia-da-computacao`)
+- [ ] A pasta do centro usa kebab-case (ex: `centro-de-informatica`)
 - [ ] Os arquivos `.md` têm nomes descritivos e amigáveis
 - [ ] O conteúdo está em Markdown válido
 - [ ] Links internos usam caminhos absolutos começando com `/guias/`
 - [ ] Imagens (se houver) estão com caminhos relativos corretos
 - [ ] O conteúdo está revisado e sem erros ortográficos
 - [ ] Se tem sub-conteúdo, a pasta tem o mesmo nome que o arquivo principal
+- [ ] Se usar numeração para ordenação, use o formato `N - Nome` (ex: `0 - Bem Vindo`)
 
 ## 🚀 Publicação
 
