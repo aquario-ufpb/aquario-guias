@@ -20,4 +20,4 @@
  Como você pode imaginar, essas disciplinas são escolhidas pelo próprio aluno, de forma que te permita explorar áreas mais direcionadas ao seu interesse. Essas matérias não aparecem no fluxograma, então cabe à você escolher quando cursa-las.
 
  ## Consulta completa da grade/matriz
- - SIGAA: https://sigaa.ufpb.br/sigaa/link/public/curso/curriculo/30278570
+ - [SIGAA](https://sigaa.ufpb.br/sigaa/link/public/curso/curriculo/30278570)
