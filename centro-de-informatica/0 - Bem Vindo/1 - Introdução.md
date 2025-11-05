@@ -1,6 +1,6 @@
 # Bem-vindo(a) ao curso!
 
-Que bom ter você no Centro de Informática (CI) da UFPB. Este guia reúne informações essenciais para sua jornada em Engenharia de Computação — do "como começar" às oportunidades de aprendizagem dentro e fora da sala de aula.
+Que bom ter você no Centro de Informática (CI) da UFPB. Este guia reúne informações essenciais para sua jornada no Centro de Informática — do "como começar" às oportunidades de aprendizagem dentro e fora da sala de aula.
 
 ## Por onde começar
 
@@ -18,7 +18,3 @@ Que bom ter você no Centro de Informática (CI) da UFPB. Este guia reúne infor
 
 - Coordenação e Secretaria: contatos e orientações na página "Coordenação".
 - Dicas de veteranos: boas práticas para estudar, se organizar e crescer no curso.
-
-## Comunidade
-
-Grupo de Ciencia da Computação: [Whatssap](https://chat.whatsapp.com/B5oCUofONmcCOPYhdKRpr2)
