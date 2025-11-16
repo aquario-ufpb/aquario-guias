@@ -1,6 +1,6 @@
 # Grade
 
 Fluxograma:
-![image](./Estrutura-CC/assets/grade.png)
+![image](./Estrutura%20CC/assets/grade.png)
 
 
